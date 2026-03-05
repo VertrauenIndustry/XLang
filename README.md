@@ -2,6 +2,10 @@
 
 Xlang is a Python-like, statically typed, memory-safe systems language prototype.
 
+# Plan for v2
+
+We are intending to make a custom compiler that surpasses most modern day compilers in pure speed and memory. 
+
 ## Current capabilities
 
 - Indentation-based syntax with explicit types.
