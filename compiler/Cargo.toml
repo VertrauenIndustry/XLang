@@ -1,0 +1,20 @@
+[package]
+name = "xlang_compiler"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+cranelift-codegen = "0.125.3"
+cranelift-frontend = "0.125.3"
+cranelift-jit = "0.125.3"
+cranelift-module = "0.125.3"
+libloading = "0.8.9"
+rayon = "1.10.0"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.52.0", features = [
+  "Win32_System_Diagnostics_Debug",
+  "Win32_System_Memory",
+  "Win32_System_Threading",
+] }

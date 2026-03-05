@@ -1,0 +1,22 @@
+[workspace]
+members = [
+  "compiler",
+  "runtime",
+  "tools/cli",
+  "tools/docmaker",
+]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+license = "MIT"
+version = "0.1.0"
+
+[profile.dev]
+incremental = true
+codegen-units = 16
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+panic = "abort"
